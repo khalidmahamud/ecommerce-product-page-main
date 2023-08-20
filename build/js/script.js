@@ -1,6 +1,5 @@
 const hamburgerMenu = document.querySelector('#hamburger-menu');
 const mobileMenu = document.querySelector('#mobile-menu');
-const mainMenu = documtnt.querySelector();
 const closeMenu = document.querySelector('#close-menu');
 const overlay = document.querySelector('#overlay');
 
