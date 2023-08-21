@@ -6,10 +6,21 @@
 
 @layer utilities {
     #mobile-menu.active {
-        @apply w-2/3 p-6 shadow-2xl
+        @apply w-2/3 p-6 sm:w-full sm:h-80 shadow-2xl opacity-100
     }
 
     #overlay.active {
         @apply visible
+    }
+
+    #carousel img[aria-current="false"] {
+        @apply hidden
+    }
+
+    #thumbnail div[aria-current="true"] {
+        @apply border-2 border-dark-orange
+    }
+    #thumbnail div[aria-current="true"] img{
+        @apply opacity-40
     }
 }
