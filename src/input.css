@@ -13,15 +13,24 @@
         @apply visible
     }
 
-    .carousel-section.active #carousel img[aria-current="false"] {
+    #carousel-slides > img[aria-current="false"] {
         @apply hidden
     }
 
-    .carousel-section.active #thumbnail div[aria-current="true"] {
+    .thumbnail[aria-current="true"] {
         @apply border-2 border-dark-orange
     }
 
-    .carousel-section.active #thumbnail div[aria-current="true"] img{
+    .thumbnail[aria-current="true"] img {
         @apply opacity-30
+    }
+
+    #lightbox-close-btn:hover > svg path {
+        @apply fill-dark-orange;
+    }
+
+    #prev-slide-btn:hover > svg path,
+    #next-slide-btn:hover > svg  path{
+        @apply stroke-dark-orange
     }
 }
