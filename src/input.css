@@ -13,14 +13,15 @@
         @apply visible
     }
 
-    #carousel img[aria-current="false"] {
+    .carousel-section.active #carousel img[aria-current="false"] {
         @apply hidden
     }
 
-    #thumbnail div[aria-current="true"] {
+    .carousel-section.active #thumbnail div[aria-current="true"] {
         @apply border-2 border-dark-orange
     }
-    #thumbnail div[aria-current="true"] img{
-        @apply opacity-40
+
+    .carousel-section.active #thumbnail div[aria-current="true"] img{
+        @apply opacity-30
     }
 }

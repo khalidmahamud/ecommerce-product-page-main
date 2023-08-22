@@ -6,6 +6,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" type="" href="images/favicon-32x32.png">
+        <script src="js/script.js" defer></script>
     </head>
     <body class="text-very-dark-blue font-sans">
         <header class="w-full fixed top-0 left-0 z-10 px-5 bg-white">
@@ -59,20 +60,20 @@
         </header>
         <main class="min-h-screen w-screen pt-[72px] md:pt-[102px] flex items-center">
             <div class="sm:max-w-xl md:max-w-5xl mx-auto mb-14 md:mb-0 md:p-16 flex flex-col md:justify-between md:items-center md:flex-row">
-                <section id="carousel-section" class="md:basis-[45%] sm:p-6 md:p-0 flex flex-col gap-7">     
+                <section id="carousel-1" class="carousel-section active md:basis-[45%] sm:p-6 md:p-0 flex flex-col gap-7">     
                     <div id="carousel" class="flex overflow-hidden relative items-center">
                         <button id="prev-btn" class="md:hidden absolute grid place-items-center w-12 h-12 m-5 left-0  bg-light-grayish-blue rounded-full"><img class="-translate-x-1/4" src="images/icon-previous.svg" alt="previous"></button>
-                        <img aria-current="true"  class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-1.jpg" alt="product 1">
-                        <img aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-2.jpg" alt="product 2">
-                        <img aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-3.jpg" alt="product 3">
-                        <img aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-4.jpg" alt="product 4">
+                        <img id="p-0" aria-current="true"  class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-1.jpg" alt="product 1">
+                        <img id="p-1" aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-2.jpg" alt="product 2">
+                        <img id="p-2" aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-3.jpg" alt="product 3">
+                        <img id="p-3" aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-4.jpg" alt="product 4">
                         <button id="next-btn" class="md:hidden absolute grid place-items-center w-12 h-12 m-5 bg-light-grayish-blue rounded-full right-0"><img class="" src="images/icon-next.svg" alt=""></button>
                     </div>
                     <div id="thumbnail" class="mobile:hidden w-full sm:grid sm:grid-cols-4 sm:gap-7">
-                        <div class="rounded-xl overflow-hidden" aria-current="true"><img class="cursor-pointer max-w-full  " src="images/image-product-1-thumbnail.jpg" alt="product 1"></div>
-                        <div class="rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full" src="images/image-product-2-thumbnail.jpg" alt="product 2"></div>
-                        <div class="rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full" src="images/image-product-3-thumbnail.jpg" alt="product 3"></div>
-                        <div class="rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full" src="images/image-product-4-thumbnail.jpg" alt="product 4"></div>
+                        <div data-thumb="0" class="bg-white rounded-xl overflow-hidden" aria-current="true"><img class="cursor-pointer max-w-full   hover:opacity-40" src="images/image-product-1-thumbnail.jpg" alt="product 1"></div>
+                        <div data-thumb="1" class="bg-white rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full hover:opacity-40" src="images/image-product-2-thumbnail.jpg" alt="product 2"></div>
+                        <div data-thumb="2" class="bg-white rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full hover:opacity-40" src="images/image-product-3-thumbnail.jpg" alt="product 3"></div>
+                        <div data-thumb="3" class="bg-white rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full hover:opacity-40" src="images/image-product-4-thumbnail.jpg" alt="product 4"></div>
                     </div>
                 </section>
 
@@ -101,8 +102,29 @@
                         </button>
                     </div>
                 </section>
+
+                <!-- lightbox -->
+                <div id="lightbox" class="w-screen min-h-screen fixed top-0 left-0 hidden justify-center items-center bg-[rgba(0,0,0,0.8)] z-50">     
+                    <section id="carousel-2" class="carousel-section md:w-[50vw] lg:w-[30vw] xl:[20vw] flex flex-col gap-7">
+                        <button id="lightbox-close-btn" class="self-end"><img class="w-5 h-5" src="images/icon-close.svg" alt="close"></button>
+                        <div id="carousel" class="flex overflow-hidden relative items-center">
+                            <button id="prev-btn" class="md:hidden absolute grid place-items-center w-12 h-12 m-5 left-0  bg-light-grayish-blue rounded-full"><img class="-translate-x-1/4" src="images/icon-previous.svg" alt="previous"></button>
+                            <img id="p-0" aria-current="true"  class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-1.jpg" alt="product 1">
+                            <img id="p-1" aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-2.jpg" alt="product 2">
+                            <img id="p-2" aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-3.jpg" alt="product 3">
+                            <img id="p-3" aria-current="false" class="carousel-img cursor-pointer max-w-full md:rounded-xl" src="images/image-product-4.jpg" alt="product 4">
+                            <button id="next-btn" class="md:hidden absolute grid place-items-center w-12 h-12 m-5 bg-light-grayish-blue rounded-full right-0"><img class="" src="images/icon-next.svg" alt=""></button>
+                        </div>
+                        <div id="thumbnail" class="mobile:hidden w-full sm:grid sm:grid-cols-4 sm:gap-7">
+                            <div data-thumb="0" class="bg-white rounded-xl overflow-hidden" aria-current="true"><img class="cursor-pointer max-w-full   hover:opacity-40" src="images/image-product-1-thumbnail.jpg" alt="product 1"></div>
+                            <div data-thumb="1" class="bg-white rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full hover:opacity-40" src="images/image-product-2-thumbnail.jpg" alt="product 2"></div>
+                            <div data-thumb="2" class="bg-white rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full hover:opacity-40" src="images/image-product-3-thumbnail.jpg" alt="product 3"></div>
+                            <div data-thumb="3" class="bg-white rounded-xl overflow-hidden" aria-current="false"><img  class="cursor-pointer max-w-full hover:opacity-40" src="images/image-product-4-thumbnail.jpg" alt="product 4"></div>
+                        </div>
+                    </section>
+                </div>
+
             </div> 
         </main>
-        <script src="js/script.js"></script>
     </body>
 </html>

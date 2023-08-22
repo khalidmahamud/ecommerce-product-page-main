@@ -38,3 +38,18 @@ nextBtn.addEventListener('click', () => {
     productImg[current].setAttribute('aria-current', 'true');
     productThumb[current].setAttribute('aria-current', 'true');
 });
+
+prevBtn.addEventListener('click', () => {
+    productImg[current].setAttribute('aria-current', 'false');
+    productThumb[current].setAttribute('aria-current', 'false');
+
+    if(current === 0) {
+        current = 3
+    }
+    else {
+        --current;
+    }
+
+    productImg[current].setAttribute('aria-current', 'true');
+    productThumb[current].setAttribute('aria-current', 'true');    
+});
