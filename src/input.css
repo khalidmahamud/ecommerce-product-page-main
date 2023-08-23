@@ -9,9 +9,9 @@
         @apply w-2/3 p-6 sm:w-full sm:h-80 shadow-2xl opacity-100
     }
 
-    #overlay.active {
+    /* #overlay.active {
         @apply visible
-    }
+    } */
 
     #carousel-slides > img[aria-current="false"] {
         @apply hidden

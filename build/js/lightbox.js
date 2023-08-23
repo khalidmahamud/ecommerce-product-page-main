@@ -1,8 +1,3 @@
-const hamburgerMenu = document.querySelector('#hamburger-menu');
-const mobileMenu = document.querySelector('#mobile-menu');
-const closeMenu = document.querySelector('#close-menu');
-const overlay = document.querySelector('#overlay');
-
 const mainCarousel = document.querySelector('#carousel-1');
 const mainCarouselSlides = mainCarousel.querySelectorAll('.carousel-img');
 const mainCarouselThumbnails = mainCarousel.querySelectorAll('.thumbnail');
@@ -64,25 +59,6 @@ const selectFromThumbnail = (productImg, thumbnail) => {
     current = next;
 };
 
-hamburgerMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    overlay.classList.toggle('hidden');
-    overlay.classList.toggle('active');
-});
-
-closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    overlay.classList.toggle('hidden');
-    overlay.classList.toggle('active');
-});
-
-document.addEventListener('click', (e) => {
-    if(e.target.id === 'overlay') {
-        mobileMenu.classList.toggle('active');
-        overlay.classList.toggle('hidden');
-        overlay.classList.toggle('active');
-    }
-});
 
 
 mainNextSlideBtn.addEventListener('click', () => {

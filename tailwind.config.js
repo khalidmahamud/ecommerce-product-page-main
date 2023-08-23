@@ -15,7 +15,8 @@ module.exports = {
         sans : ['"Kumbh Sans"', 'sans-serif'],
       },
       screens: {
-        'mobile': '0px',
+        'mobile1': '0px',
+        'mobile2': '385px',
       },
     },
   },
