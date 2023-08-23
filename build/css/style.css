@@ -536,10 +536,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.invisible{
-  visibility: hidden;
-}
-
 .fixed{
   position: fixed;
 }
@@ -580,12 +576,20 @@ video {
   top: 72px;
 }
 
+.top-1{
+  top: 0.25rem;
+}
+
+.top-0\.5{
+  top: 0.125rem;
+}
+
 .-top-0{
   top: -0px;
 }
 
-.right-1{
-  right: 0.25rem;
+.-top-0\.5{
+  top: -0.125rem;
 }
 
 .z-10{
@@ -653,10 +657,6 @@ video {
   height: 1px;
 }
 
-.h-\[200px\]{
-  height: 200px;
-}
-
 .h-full{
   height: 100%;
 }
@@ -665,8 +665,16 @@ video {
   height: 100vh;
 }
 
-.min-h-\[200px\]{
-  min-height: 200px;
+.h-\[\]{
+  height: ;
+}
+
+.h-\[102\]{
+  height: 102;
+}
+
+.h-\[102px\]{
+  height: 102px;
 }
 
 .min-h-screen{
@@ -943,14 +951,6 @@ video {
 
 .leading-5{
   line-height: 1.25rem;
-}
-
-.leading-\[200px\]{
-  line-height: 200px;
-}
-
-.leading-\[150px\]{
-  line-height: 150px;
 }
 
 .leading-\[120px\]{
